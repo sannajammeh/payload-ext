@@ -1,5 +1,5 @@
 {
-  "name": "adapter-bunny-cdn",
+  "name": "@payload-ext/adapter-bunny-cdn",
   "version": "0.0.0",
   "type": "module",
   "description": "",
