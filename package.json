@@ -10,7 +10,11 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepublish": "turbo run build --filter=./packages/*",
+    "prerelease": "turbo run build --filter=./packages/*",
+    "ci:version": "pnpm changeset version",
+    "ci:publish": "pnpm run prerelease && changeset publish"
   },
   "config": {
     "commitizen": {
