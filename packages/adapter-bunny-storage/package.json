@@ -1,0 +1,39 @@
+{
+  "name": "core",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "module": "./dist/index.esm.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**",
+    "./package.json"
+  ],
+  "scripts": {
+    "build": "bunchee ./src/index.ts",
+    "dev": "bunchee ./src/index.ts -w"
+  },
+  "private": false,
+  "keywords": [],
+  "author": "Sanna Jammeh",
+  "license": "ISC",
+  "devDependencies": {
+    "@payloadcms/plugin-cloud-storage": "^1.0.15",
+    "bunchee": "3.1.0",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "@payloadcms/plugin-cloud-storage": "^1.0.15"
+  }
+}
