@@ -7,10 +7,14 @@ env:
   CI: true
   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
   TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
 jobs:
   version:
     timeout-minutes: 15
     runs-on: ubuntu-latest
+
+    permissions: write-all
+
     steps:
       - name: checkout code repository
         uses: actions/checkout@v3
